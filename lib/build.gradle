@@ -32,5 +32,7 @@ testImplementation group: 'org.testng', name: 'testng', version: '7.5'
 test {
 	 useTestNG() {
          suites 'testng.xml'
-	}}
+         outputDirectory = file("$projectDir/AutomationReport")
+	}
+	reports.html.setDestination(file("$projectDir/GradleReport"))}
 
